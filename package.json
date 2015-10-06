@@ -1,0 +1,40 @@
+{
+  "name": "react-codelunch",
+  "version": "0.0.0",
+  "devDependencies": {
+    "babel-eslint": "^4.1.0",
+    "eslint": "^1.1.0",
+    "eslint-plugin-nodeca": "^1.0.3",
+    "eslint-plugin-react": "^3.4.1",
+    "react-hot-loader": "^1.3.0",
+    "webpack-dev-server": "^1.10.1",
+    "webpack-notifier": "^1.2.1"
+  },
+  "dependencies": {
+    "autoprefixer": "^6.0.3",
+    "babel-core": "^5.2.17",
+    "babel-loader": "^5.0.0",
+    "babel-runtime": "^5.8.20",
+    "css-loader": "^0.18.0",
+    "css-mqpacker": "^4.0.0",
+    "extract-text-webpack-plugin": "^0.8.0",
+    "html-webpack-plugin": "^1.6.1",
+    "json-loader": "^0.5.3",
+    "node-sass": "^3.2.0",
+    "postcss-loader": "^0.6.0",
+    "raw-loader": "^0.5.1",
+    "react": "^0.14.0-rc1",
+    "react-dom": "^0.14.0-rc1",
+    "react-router": "^1.0.0-rc1",
+    "rimraf": "^2.4.3",
+    "sass-loader": "^2.0.0",
+    "style-loader": "^0.12.2",
+    "url-loader": "^0.5.6",
+    "webpack": "^1.8.11"
+  },
+  "scripts": {
+    "start": "rimraf build && webpack-dev-server --progress --colors --config webpack/config.js",
+    "build": "rimraf build && webpack --progress --colors --profile --config webpack/config.js",
+    "build-production": "rimraf build && webpack --progress --colors --profile --production --config webpack/config.js"
+  }
+}

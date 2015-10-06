@@ -1,0 +1,55 @@
+// Spacing tool
+// Padding and margin mixins to tweak layout on a micro level. The conventions used for the spacing mixins:
+// [m|p][t|r|b|l|h|v|n] equals [margin|margin][top|right|bottom|left|horizontal|vertical|none]
+// with size (unit map key name) as the only optional arument.
+// Full list of mixins: p, pt, pr, pb, pl, ph, pv, m, mt, mr, mb, ml, mh, mv.
+// E.g. `@include p;` will give you a default padding.
+// E.g. `@include ph(0);` will give you a zero padding left and a zero padding right.
+// E.g. `@include mt(lg);` will give you a large margin top.
+// E.g. `@include mb;` will give you a small margin bottom.
+
+@import './units';
+
+@mixin p($alias: $unit-default) {
+  @include unit(padding, $alias);
+}
+@mixin pt($alias: $unit-default) {
+  @include unit(padding-top, $alias);
+}
+@mixin pr($alias: $unit-default) {
+  @include unit(padding-right, $alias);
+}
+@mixin pb($alias: $unit-default) {
+  @include unit(padding-bottom, $alias);
+}
+@mixin pl($alias: $unit-default) {
+  @include unit(padding-left, $alias);
+}
+@mixin ph($alias: $unit-default) {
+  @include unit((padding-left, padding-right), $alias);
+}
+@mixin pv($alias: $unit-default) {
+  @include unit((padding-top, padding-bottom), $alias);
+}
+
+@mixin m($alias: $unit-default) {
+  @include unit(margin, $alias);
+}
+@mixin mt($alias: $unit-default) {
+  @include unit(margin-top, $alias);
+}
+@mixin mr($alias: $unit-default) {
+  @include unit(margin-right, $alias);
+}
+@mixin mb($alias: $unit-default) {
+  @include unit(margin-bottom, $alias);
+}
+@mixin ml($alias: $unit-default) {
+  @include unit(margin-left, $alias);
+}
+@mixin mh($alias: $unit-default) {
+  @include unit((margin-left, margin-right), $alias);
+}
+@mixin mv($alias: $unit-default) {
+  @include unit((margin-top, margin-bottom), $alias);
+}

@@ -1,0 +1,14 @@
+// Column
+$gutter: 1rem !default;
+@mixin column($width, $cycle: 0, $gutter: $gutter) {
+  @if $cycle > 0 {
+    $psuedos: '&:nth-of-type(#{$cycle}n), &:last-child';
+  } @else {
+    $psuedos: '&:last-child';
+  }
+  width: calc(99.99% * #{$width} - (#{$gutter} - #{$gutter} * #{$width}));
+  margin-right: $gutter;
+  #{$psuedos} {
+    margin-right: 0;
+  }
+}

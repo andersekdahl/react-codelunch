@@ -1,0 +1,21 @@
+// List
+// The list-bare object simply removes any indents and bullet points from lists.
+@mixin list-bare {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+// The list-inline object simply displays a list of items in one line.
+@mixin list-inline {
+  > li {
+    display: inline-block;
+  }
+}
+
+// The list-block object creates blocky list items out of a `ul` or `ol`.
+@mixin list-block {
+  > li {
+    display: block;
+  }
+}

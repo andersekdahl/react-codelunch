@@ -1,0 +1,4 @@
+**/vendor/*.js
+**/Vendor/*.js
+**/webpack/*.js
+src/apptusesales.js

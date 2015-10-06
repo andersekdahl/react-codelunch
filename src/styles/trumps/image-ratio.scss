@@ -1,0 +1,37 @@
+.image-ratio {
+  position: relative;
+  &::before {
+    content: '';
+    display: block;
+    padding-top: 100%;
+  }
+  img {
+    position: absolute;
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
+  &--5-7::before {
+    padding-top: 7 / 5 * 100%;
+  }
+  &--7-5::before {
+    padding-top: 5 / 7 * 100%;;
+  }
+  &--top img {
+    margin-top: 0;
+  }
+  &--right img {
+    margin-right: 0;
+  }
+  &--bottom img {
+    margin-bottom: 0;
+  }
+  &--left img {
+    margin-left: 0;
+  }
+}

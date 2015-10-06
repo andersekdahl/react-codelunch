@@ -1,0 +1,19 @@
+// Buttons
+@import '../../styles/settings/colors';
+@import '../../styles/tools/spacing';
+.btn {
+  @include ph(lg);
+  @include pv(tn);
+  display: inline-block;
+  color: $color-tertiary-text;
+  cursor: pointer;
+  border: none;
+  background: $color-tertiary;
+  transition: background 200ms ease-in-out;
+  &:hover,
+  &:focus,
+  &:active {
+    background: $color-tertiary--dark;
+    color: $color-tertiary--dark-text;
+  }
+}
