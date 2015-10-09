@@ -7,7 +7,7 @@
 
 ## Developing
 
-Start Webpack dev server by running `$ npm start` and open http://localhost:8080 in your favourite browser.
+Start Webpack dev server by running `$ npm start` and open `http://localhost:8080/index.html` in your favourite browser.
 
 ## Building
 
